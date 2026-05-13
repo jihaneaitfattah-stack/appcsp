@@ -3,7 +3,14 @@ import pandas as pd
 import numpy as np
 import os
 import joblib
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pl
+import sys
+
+try:
+    import joblib
+except ImportError:
+    os.system(f"{sys.executable} -m pip install joblib")
+    import joblib
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
