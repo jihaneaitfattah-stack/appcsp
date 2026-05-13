@@ -6,11 +6,7 @@ import joblib
 import matplotlib.pyplot as pl
 import sys
 
-try:
-    import joblib
-except ImportError:
-    os.system(f"{sys.executable} -m pip install joblib")
-    import joblib
+import joblib
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
